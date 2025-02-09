@@ -1,0 +1,11 @@
+﻿version: '3.8'
+
+services:
+  forexcbr:
+    image: forexcbr
+    build:
+      context: .
+      dockerfile: ForexCbr/Dockerfile
+    container_name: forexcbr
+    environment:
+      - CbrUrl=https://www.cbr.ru/scripts/XML_daily.asp
